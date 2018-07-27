@@ -1,0 +1,42 @@
+{
+  "name": "tools-cli",
+  "version": "1.0.0",
+  "description": "Cool cli tools to do all bunch of things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli-app",
+    "cli",
+    "tools",
+    "hash",
+    "utils",
+    "clipboard",
+    "random"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "bin": {
+    "utils": "index.js",
+    "tools": "index.js"
+  },
+  "repository": "lefuturiste/tools-cli",
+  "author": "lefuturiste <contact@lefuturiste.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "apache-crypt": "^1.2.1",
+    "clipboardy": "^1.2.3",
+    "colors": "^1.3.0",
+    "commander": "^2.15.1",
+    "cryptmd5": "^0.1.2",
+    "exec-stream": "^0.1.0",
+    "global-dirs": "^0.1.1",
+    "md5": "^2.2.1",
+    "moment": "^2.22.2",
+    "randomatic": "^3.0.0",
+    "runscript": "^1.3.0",
+    "sha.js": "^2.4.11"
+  }
+}
