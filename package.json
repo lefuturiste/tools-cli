@@ -1,6 +1,6 @@
 {
-  "name": "tools-cli",
-  "version": "1.0.0",
+  "name": "lefuturiste-tools-cli",
+  "version": "1.0.2",
   "description": "Cool cli tools to do all bunch of things",
   "main": "index.js",
   "scripts": {
@@ -15,12 +15,9 @@
     "clipboard",
     "random"
   ],
-  "files": [
-    "index.js"
-  ],
   "bin": {
-    "utils": "index.js",
-    "tools": "index.js"
+    "utils": "bin/tools-cli",
+    "tools": "bin/tools-cli"
   },
   "repository": "lefuturiste/tools-cli",
   "author": "lefuturiste <contact@lefuturiste.fr>",

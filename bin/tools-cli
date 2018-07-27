@@ -8,8 +8,7 @@ if (process.argv.length == 2) {
   console.log("show help with --help");
 }
 
-app
-  .version('1.0.0')
+app.version(require('../package.json').version);
 
 app
   .command('clipboard')
@@ -17,7 +16,7 @@ app
   .alias('clipd')
   .alias('c')
   .description("Pipe and copy the content into the clipboard")
-  .action(require('./src/clipboard'))
+  .action(require('../lib/clipboard.js'))
 
 app
   .command('random')
@@ -32,14 +31,14 @@ app
   .option('-a, --all', 'If the string should contain all kind of chars')
   .option('-p, --patern <pat>', 'A custom patern')
   .description("Generate random data")
-  .action(require('./src/random.js'))
+  .action(require('../lib/random.js'))
 
 app
   .command('hash <algo> [content]')
   .alias('h')
   .option('-c, --clipboard', 'Copy or not in the clipboard')
   .description("Hash data")
-  .action(require('./src/hash'))
+  .action(require('../lib/hash.js'))
 
 app
   .command('now')
@@ -50,6 +49,6 @@ app
   .option('-f, --format <format>', 'Custom format')
   .option('-c, --clipboard', 'Copy or not in the clipboard')
   .description("Get the datetime")
-  .action(require('./src/now'))
+  .action(require('../lib/now.js'))
 
 app.parse(process.argv)
